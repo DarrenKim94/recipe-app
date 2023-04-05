@@ -1,0 +1,9 @@
+.section1 {
+    background-image: url('https://images.pexels.com/photos/616401/pexels-photo-616401.jpeg?cs=srgb&dl=pexels-lukas-616401.jpg&fm=jpg');
+    background-color: #f1f2f2;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20rem;
+    color: white;
+}
