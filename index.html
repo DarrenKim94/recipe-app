@@ -15,7 +15,7 @@
 <body>
     <div class="section1 pt-5 pb-5 text-center">
         <h2 class="fs-1 mt-5">Click The Button Below For Another Recipe</h2>
-        <button class="fs-3 btn btn-success">Get A New Recipe</button>
+        <button id="button" onclick="changeRecipe()" class="fs-3 btn btn-success">Get A New Recipe</button>
     </div>
 
     <div id="imageContainer">
@@ -24,12 +24,12 @@
     </div>
 
     <div class="container-fluid bg-light">
-        <div class="row ps-5">
-            <div class="col-sm-12 col-lg-4 pt-5 border-start-0 border-2 border-white">
+        <div class="row">
+            <div class="col-sm-12 col-lg-4">
                 <h3>Ingredients</h3>
                 <ul id="ingredientList"></ul>
             </div>
-            <div class="col-sm-12 col-lg-8 pt-5">
+            <div class="col-sm-12 col-lg-8 ">
                 <h3>Steps</h3>
                 <ol id="stepList"></ol>
             </div>
