@@ -6,7 +6,8 @@ const recipeIngredients = document.getElementById('ingredientList');
 const recipeInstructions = document.getElementById('stepList');
 const recipeVideo = document.getElementById('recipeVideo');
 const button = document.getElementById('button');
-const recipeArray = [recipeImage, recipeName, recipeIngredients, recipeVideo, recipeInstructions]
+const recipeArray = [recipeImage, recipeName, recipeIngredients, recipeVideo, recipeInstructions];
+let listOfIngredients = [];
 
 function showRandomRecipe() {
 	axios.get("https://www.themealdb.com/api/json/v1/1/random.php")
@@ -20,7 +21,18 @@ function showRandomRecipe() {
 
             recipeVideo.innerHTML = `<iframe width='640' height='390' src='https://www.youtube.com/embed/${recipe.strYoutube.slice(-11)}' allowFullScreen></iframe>`
             
-            
+            for (let i = 1; i < 20; i++) {
+                if(recipe[`strIngredient${i}`]) {
+                    listOfIngredients.push(recipe[`strMeasure${i}`] + ' ' + recipe[`strIngredient${i}`])
+                }
+            }
+
+            listOfIngredients.forEach(ingredient => {
+                const li = document.createElement('li');
+                recipeIngredients.append(li);
+                li.innerHTML = ingredient;
+            });
+
         })
 }
 
