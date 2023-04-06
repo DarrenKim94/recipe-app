@@ -10,7 +10,10 @@ const recipeArray = [recipeImage, recipeName, recipeIngredients, recipeVideo, re
 function showRandomRecipe() {
 	axios.get("https://www.themealdb.com/api/json/v1/1/random.php")
         .then(response => {
-            console.log(response.data.meals[0])
+            let recipe = response.data.meals[0];
+            recipeName.innerHTML = recipe.strMeal;
+            recipeInstructions.innerHTML = recipe.strInstructions;
+            recipeImage.innerHTML =`<img src="${recipe.strMealThumb}" alt="recipe image">`;
         })
 }
 
@@ -19,3 +22,10 @@ function clearRecipe() {
         element.innerHTML= '';
     });
 }
+
+function createImage() {
+    let recipe = response.data.meals[0];
+    image = document.createElement('img');
+    image.innerHTML = `<img src="${recipe.strMealThumb}" alt="Recipe Image">`
+}
+
