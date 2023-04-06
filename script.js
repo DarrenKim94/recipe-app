@@ -5,6 +5,7 @@ const recipeImage = document.getElementById('recipeImage');
 const recipeIngredients = document.getElementById('ingredientList');
 const recipeInstructions = document.getElementById('stepList');
 const recipeVideo = document.getElementById('recipeVideo');
+const button = document.getElementById('button');
 const recipeArray = [recipeImage, recipeName, recipeIngredients, recipeVideo, recipeInstructions]
 
 function showRandomRecipe() {
@@ -18,6 +19,8 @@ function showRandomRecipe() {
             recipeImage.innerHTML =`<img src="${recipe.strMealThumb}" alt="recipe image">`;
 
             recipeVideo.innerHTML = `<iframe width='640' height='390' src='https://www.youtube.com/embed/${recipe.strYoutube.slice(-11)}' allowFullScreen></iframe>`
+            
+            
         })
 }
 
@@ -27,4 +30,11 @@ function clearRecipe() {
     });
 }
 
+function changeRecipe() {
+    clearRecipe();
+    showRandomRecipe();
+}
 
+window.onload = () => {
+	showRandomRecipe();
+}
