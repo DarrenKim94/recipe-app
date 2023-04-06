@@ -17,7 +17,7 @@ function showRandomRecipe() {
 
             recipeInstructions.innerHTML = recipe.strInstructions;
 
-            recipeImage.innerHTML =`<img src="${recipe.strMealThumb}" alt="recipe image">`;
+            recipeImage.innerHTML =`<img width='640' height='390' src="${recipe.strMealThumb}" alt="recipe image">`;
 
             recipeVideo.innerHTML = `<iframe width='640' height='390' src='https://www.youtube.com/embed/${recipe.strYoutube.slice(-11)}' allowFullScreen></iframe>`
             
