@@ -14,23 +14,23 @@
 </head>
 <body>
     <div class="section1 pt-5 pb-5 text-center">
-        <h2 class="fs-1 mt-5">Click The Button Below For Another Recipe</h2>
-        <button id="button" onclick="changeRecipe()" class="fs-3 btn btn-success">Get A New Recipe</button>
+        <h2 class="fs-1 mt-5 heading">Click The Button Below For Another Recipe</h2>
+        <button id="button" onclick="changeRecipe()" class="fs-3 btn btn-warning">Get A New Recipe</button>
     </div>
 
     <div id="imageContainer" class="row pt-3 pb-3">
-            <h1 id="recipeName" class="text-center col-lg-12 col-sm-12"></h1>
+            <h1 id="recipeName" class="heading text-center col-lg-12 col-sm-12"></h1>
             <p id="recipeImage" class="text-center col-lg-12 col-sm-12"></p>
     </div>
 
     <div class="container-fluid bg-light">
-        <div class="row pt-3 pb-3">
+        <div id="stepsContainer"  class="row pt-3 pb-3">
             <div class="col-sm-12 col-lg-6">
-                <h3>Ingredients</h3>
+                <h3 class="heading">Ingredients</h3>
                 <ul id="ingredientList"></ul>
             </div>
             <div class="col-sm-12 col-lg-6 ">
-                <h3>Instructions</h3>
+                <h3 class="heading">Instructions</h3>
                 <ol id="stepList"></ol>
             </div>
         </div>
