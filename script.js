@@ -32,7 +32,6 @@ function showRandomRecipe() {
                 recipeIngredients.append(li);
                 li.innerHTML = ingredient;
             });
-
         })
 }
 
@@ -43,6 +42,7 @@ function clearRecipe() {
 }
 
 function changeRecipe() {
+    listOfIngredients = [];
     clearRecipe();
     showRandomRecipe();
 }
