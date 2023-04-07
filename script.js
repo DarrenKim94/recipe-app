@@ -17,9 +17,9 @@ function showRandomRecipe() {
 
             recipeInstructions.innerHTML = recipe.strInstructions;
 
-            recipeImage.innerHTML =`<img width='640' height='390' src="${recipe.strMealThumb}" alt="recipe image">`;
+            recipeImage.innerHTML =`<img max-width='640' height='390' src="${recipe.strMealThumb}" alt="recipe image">`;
 
-            recipeVideo.innerHTML = `<iframe width='640' height='390' src='https://www.youtube.com/embed/${recipe.strYoutube.slice(-11)}' allowFullScreen></iframe>`
+            recipeVideo.innerHTML = `<iframe class="recipeVideo" width='640' height='390' src='https://www.youtube.com/embed/${recipe.strYoutube.slice(-11)}' allowFullScreen></iframe>`
             
             for (let i = 1; i < 20; i++) {
                 if(recipe[`strIngredient${i}`]) {
