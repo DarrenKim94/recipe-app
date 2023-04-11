@@ -21,7 +21,7 @@ function showRandomRecipe() {
 
             recipeVideo.innerHTML = `<iframe class="recipeVideo" width='640' height='390' src='https://www.youtube.com/embed/${recipe.strYoutube.slice(-11)}' allowFullScreen></iframe>`
             
-            for (let i = 1; i < 20; i++) {
+            for (let i = 1; i <= 20; i++) {
                 if(recipe[`strIngredient${i}`]) {
                     listOfIngredients.push(recipe[`strMeasure${i}`] + ' ' + recipe[`strIngredient${i}`])
                 }
